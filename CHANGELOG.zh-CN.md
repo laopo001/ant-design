@@ -23,6 +23,11 @@ timeline: true
   - 新增 `showAction`。
   - 新增 `onMouseEnter` 和 `onMouseLeave`。
   - 新增 `focus()`、`blur()` 和 `autoFocus`。
+- Table
+  - 新增 `components` 属性。
+  - 新增 `onRow` 属性。
+  - 新增 `column[onCell]` 属性。
+  - 新增 `column[align]` 属性。
 
 ## 2.13.10
 
