@@ -3,7 +3,7 @@ const CSSSplitWebpackPlugin = require('css-split-webpack-plugin').default;
 
 const isDev = process.env.NODE_ENV === 'development';
 const usePreact = process.env.REACT_ENV === 'preact';
-const useAbcc = process.env.REACT_ENV === 'abcc';
+const useAbcc = process.env.REACT_ENV === 'abc-react';
 module.exports = {
   port: 8001,
   source: {
@@ -76,8 +76,9 @@ module.exports = {
       });
     } else if (useAbcc) {
       config.resolve.alias = Object.assign({}, config.resolve.alias, {
-        react: 'abcc',
-        'react-dom': 'abcc',
+        react: 'abc-react',
+        'react-dom': 'abc-react',
+        // 'react-router': 'react-router',
       });
     } else if (isDev) {
       config.externals = Object.assign({}, config.externals, {

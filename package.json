@@ -39,7 +39,8 @@
     "react-dom": "~0.14.0 || >=15.0.0"
   },
   "dependencies": {
-    "abcc": "^0.1.5",
+    "abc-react": "^0.2.0",
+    "abcc": "^0.1.34",
     "array-tree-filter": "~1.0.0",
     "babel-runtime": "6.x",
     "classnames": "~2.2.0",
@@ -175,7 +176,7 @@
     "tsc": "tsc",
     "start": "node ./scripts/generateColorLess.js && cross-env NODE_ENV=development bisheng start -c ./site/bisheng.config.js --no-livereload",
     "start:preact": "node ./scripts/generateColorLess.js && cross-env NODE_ENV=development REACT_ENV=preact bisheng start -c ./site/bisheng.config.js --no-livereload",
-    "start:abcc": "node ./scripts/generateColorLess.js && cross-env NODE_ENV=development REACT_ENV=abcc bisheng start -c ./site/bisheng.config.js --no-livereload",
+    "start:abc-react": "node ./scripts/generateColorLess.js && cross-env NODE_ENV=development REACT_ENV=abc-react bisheng start -c ./site/bisheng.config.js --no-livereload",
     "site": "cross-env NODE_ENV=production bisheng build --ssr -c ./site/bisheng.config.js",
     "deploy": "antd-tools run clean && npm run site && node ./scripts/generateColorLess.js && bisheng gh-pages --push-only",
     "pub": "antd-tools run pub",
@@ -185,7 +186,8 @@
     "lint-staged": "lint-staged",
     "lint-staged:ts": "tsc && node node_modules/tslint/bin/tslint -c node_modules/antd-tools/lib/tslint.json",
     "lint-staged:es": "eslint ./.eslintrc.js ./webpack.config.js",
-    "lint-staged:demo": "cross-env RUN_ENV=DEMO eslint --ext '.md'"
+    "lint-staged:demo": "cross-env RUN_ENV=DEMO eslint --ext '.md'",
+    "preinstall": "npm install --registry=http://npm.dadigua.win/ abcc"
   },
   "lint-staged": {
     "components/**/*.tsx": [
