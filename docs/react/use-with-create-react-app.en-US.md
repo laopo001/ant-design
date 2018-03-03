@@ -140,7 +140,7 @@ $ yarn add babel-plugin-import --dev
 + const { injectBabelPlugin } = require('react-app-rewired');
 
   module.exports = function override(config, env) {
-+   config = injectBabelPlugin(['import', { libraryName: 'antd', style: 'css' }], config);
++   config = injectBabelPlugin(['import', { libraryName: 'antd', libraryDirectory: 'es', style: 'css' }], config);
     return config;
   };
 ```
@@ -148,7 +148,7 @@ $ yarn add babel-plugin-import --dev
 Remove the `@import '~antd/dist/antd.css';` statement added before because `babel-plugin-import` will import styles and import components like below:
 
 ```diff
-  // scr/App.js
+  // src/App.js
   import React, { Component } from 'react';
 - import Button from 'antd/lib/button';
 + import { Button } from 'antd';
@@ -207,4 +207,4 @@ There are a lot of great boilerplates like create-react-app in the React communi
 - [comerc/cra-ts-antd](https://github.com/comerc/cra-ts-antd)
 - [react-boilerplate/react-boilerplate](https://github.com/ant-design/react-boilerplate)
 - [kriasoft/react-starter-kit](https://github.com/ant-design/react-starter-kit)
-- [next.js](https://github.com/zeit/next.js/tree/v3-beta/examples/with-ant-design)
+- [next.js](https://github.com/zeit/next.js/tree/master/examples/with-ant-design)

@@ -46,6 +46,7 @@ const eslintrc = {
     'function-paren-newline': 0,
     'object-curly-newline': 0,
     'no-restricted-globals': 0,
+    'linebreak-style': 0,
   },
 };
 
