@@ -4,7 +4,7 @@ const replaceLib = require('antd-tools/lib/replaceLib');
 
 const isDev = process.env.NODE_ENV === 'development';
 const usePreact = process.env.REACT_ENV === 'preact';
-
+const useAbc = process.env.REACT_ENV === 'abc';
 function alertBabelConfig(rules) {
   rules.forEach((rule) => {
     if (rule.loader && rule.loader === 'babel-loader') {
@@ -98,6 +98,11 @@ module.exports = {
         'react-dom': 'preact-compat',
         'create-react-class': 'preact-compat/lib/create-react-class',
         'react-router': 'react-router',
+      });
+    } else if (useAbc) {
+      config.resolve.alias = Object.assign({}, config.resolve.alias, {
+        react: 'abc-react',
+        'react-dom': 'abc-react',
       });
     }
 

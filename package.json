@@ -39,7 +39,7 @@
     "react-dom": ">=16.0.0"
   },
   "dependencies": {
-    "abc-react": "^0.2.0",
+    "abc-react": "^0.2.5",
     "array-tree-filter": "^2.0.0",
     "babel-runtime": "6.x",
     "classnames": "~2.2.0",
@@ -186,6 +186,7 @@
     "tsc": "tsc",
     "start": "rimraf _site && node ./scripts/generateColorLess.js && cross-env NODE_ENV=development bisheng start -c ./site/bisheng.config.js",
     "start:preact": "node ./scripts/generateColorLess.js && cross-env NODE_ENV=development REACT_ENV=preact bisheng start -c ./site/bisheng.config.js",
+    "start:abc": "node ./scripts/generateColorLess.js && cross-env NODE_ENV=development REACT_ENV=abc bisheng start -c ./site/bisheng.config.js",
     "site": "cross-env NODE_ENV=production bisheng build --ssr -c ./site/bisheng.config.js && node ./scripts/generateColorLess.js",
     "predeploy": "antd-tools run clean && npm run site",
     "deploy": "bisheng gh-pages --push-only",
