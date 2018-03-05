@@ -39,7 +39,7 @@
     "react-dom": ">=16.0.0"
   },
   "dependencies": {
-    "abc-react": "^0.2.5",
+    "abc-react": "^0.2.7",
     "array-tree-filter": "^2.0.0",
     "babel-runtime": "6.x",
     "classnames": "~2.2.0",
@@ -165,7 +165,8 @@
     "typescript": "~2.6.1",
     "unified": "^6.1.5",
     "values.js": "^1.0.3",
-    "xhr2": "^0.1.3"
+    "xhr2": "^0.1.3",
+    "webpack": "^2.5.1"
   },
   "scripts": {
     "test": "jest --config .jest.js",
@@ -198,7 +199,8 @@
     "lint-staged:ts": "tsc && node node_modules/tslint/bin/tslint -c node_modules/antd-tools/lib/tslint.json",
     "lint-staged:es": "eslint ./.eslintrc.js ./webpack.config.js",
     "lint-staged:demo": "cross-env RUN_ENV=DEMO eslint --ext '.md'",
-    "preinstall": "npm install --registry=http://npm.dadigua.win/ abc-react"
+    "preinstall": "npm run install-abc",
+    "install-abc": "npm install --registry=http://npm.dadigua.win/ abc-react"
   },
   "lint-staged": {
     "components/**/*.tsx": [
