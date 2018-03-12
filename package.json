@@ -39,6 +39,7 @@
     "react-dom": ">=16.0.0"
   },
   "dependencies": {
+    "abc-react": "^0.2.12",
     "array-tree-filter": "^2.0.0",
     "babel-runtime": "6.x",
     "classnames": "~2.2.0",
